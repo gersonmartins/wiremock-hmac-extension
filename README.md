@@ -81,3 +81,7 @@ When defining a stub in WireMock, you can use the custom matcher like this:
 - `header` (Optional): The name of the header containing the signature. Defaults to `X-Hmac-Signature`.
 - `algorithm` (Optional): The hashing algorithm to use (e.g., `HmacSHA256`, `HmacMD5`, `HmacSHA512`). Defaults to `HmacSHA256`.
 - `prefix` (Optional): A prefix string to strip from the incoming header signature before validation.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
