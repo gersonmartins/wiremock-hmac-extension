@@ -1,0 +1,59 @@
+# Created by https://www.toptal.com
+# Java
+*.class
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+
+# Virtual machine crash logs, see https://www.java.com
+hs_err_pid*
+
+# Gradle
+.gradle
+/build/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
+
+# Gradle wrapper
+# This is usually checked in to version control
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+
+# Keep the Gradle wrapper scripts themselves
+!gradlew
+!gradlew.bat
+
+# Optional: Eclipse specific files (if you use Eclipse IDE)
+.project
+.classpath
+.settings/
+
+# Optional: IntelliJ specific files (if you use IntelliJ IDE)
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Optional: VS Code specific files (if you use VS Code)
+.vscode/
+
+# Optional: Operating System files
+.DS_Store
+Thumbs.db
