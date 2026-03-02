@@ -16,7 +16,10 @@ This project is a WireMock extension that provides an HMAC request matcher. It a
 
 ## Compilation
 
-You can compile the project and build the final `.jar` used for the extension.
+You can compile the project and build the extension. This will generate two `.jar` files in `build/libs/`:
+
+1. **Standard JAR** (`wiremock-hmac-VERSION.jar`): Contains only the extension code. Use this if you are using WireMock in an existing Java/JUnit project.
+2. **Standalone JAR** (`wiremock-hmac-VERSION-standalone.jar`): A fat JAR containing both WireMock and the extension. Use this if you want to run WireMock directly from the command line.
 
 ### Using Task
 
@@ -24,22 +27,26 @@ You can compile the project and build the final `.jar` used for the extension.
 task build
 ```
 
-This will run Gradle and output the compiled `.jar` file to the `build/libs/` directory.
+This will run Gradle and output the compiled `.jar` files to the `build/libs/` directory.
 
 ### Using Gradle
 
 ```bash
-./gradlew clean jar
+./gradlew clean build shadowJar
 ```
 
-## Using in WireMock Standalone Server
+## Running WireMock Standalone Server
 
-To use this extension in a WireMock standalone server:
+The easiest way to run the extension is using the generated **Standalone JAR**. It behaves exactly like the official WireMock standalone jar but has the HMAC extension built-in.
 
-1. Build the `.jar` as described above.
-2. Run the WireMock standalone jar, specifying the extensions via classpath and explicitly loading the extension class.
+```bash
+java -jar build/libs/wiremock-hmac-1.0.0-SNAPSHOT-standalone.jar \
+    --extensions com.github.gersonmartins.wiremock.extension.HmacRequestMatcherExtension
+```
 
-Example if your WireMock standalone jar and the extension jar are available in the same directory:
+### Using the Standard JAR (Classpath mode)
+
+If you downloaded the official WireMock standalone jar separately, you can attach the **Standard JAR** via the classpath:
 
 ```bash
 java -cp "wiremock-standalone-X.Y.Z.jar:build/libs/wiremock-hmac-1.0.0-SNAPSHOT.jar" \

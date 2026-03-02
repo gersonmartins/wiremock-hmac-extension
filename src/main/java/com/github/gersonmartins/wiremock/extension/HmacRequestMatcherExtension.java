@@ -50,7 +50,7 @@ public class HmacRequestMatcherExtension extends RequestMatcherExtension {
             String expectedSignature = calculateHmac(algorithm, payload, secret);
             return MatchResult.of(expectedSignature.equals(actualSignature));
         } catch (NoSuchAlgorithmException | InvalidKeyException e) {
-            System.err.println("Failed to calculate HMAC: " + e.getMessage());
+            System.err.println(String.format("Failed to calculate HMAC: %s", e.getMessage()));
             return MatchResult.noMatch();
         }
     }
