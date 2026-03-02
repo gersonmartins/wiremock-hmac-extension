@@ -3,8 +3,9 @@ version: "3"
 tasks:
   build:
     desc: Build the standard extension .jar and standalone executable .jar
+    deps: [clean]
     cmds:
-      - ./gradlew clean build shadowJar
+      - ./gradlew build shadowJar
       - echo "The compiled jars can be found in build/libs/"
 
   test:
