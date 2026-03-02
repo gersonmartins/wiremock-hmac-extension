@@ -1,18 +1,5 @@
 name-template: 'v$NEXT_PATCH_VERSION 🚀'
 tag-template: 'v$NEXT_PATCH_VERSION'
-template: |
-  ## What's Changed
-  $CHANGES
-  
-  ## 📝 Summary
-  *   **New Features**: $LABELED_FEAT
-  *   **Bug Fixes**: $LABELED_FIX
-  *   **Maintenance**: $LABELED_CHORE
-
-  ## ⚙️ Dependencies
-  $DEPENDENCIES
-  
-  **Full Changelog**: $URL/compare/$PREVIOUS_TAG...$RESOLVED_TAG
 change-template: '- $TITLE (#$NUMBER) @$AUTHOR'
 categories:
   - title: '🚀 Features'
@@ -40,3 +27,6 @@ version-resolver:
       - 'patch'
       - 'fix'
   default: patch
+exclude-labels:
+  - 'skip-changelog'  
+
