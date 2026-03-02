@@ -4,7 +4,14 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
+  pull_request:
+    types: [opened, reopened, synchronize, edited]
+  pull_request_target:
+    types: [opened, reopened, synchronize, edited]
+
+
+permissions:
+  contents: read
 
 jobs:
   update_release_draft:
@@ -14,9 +21,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: release-drafter/release-drafter@v6
-        with:
-          name: next
-          tag: next
-          version: next
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
