@@ -41,7 +41,7 @@ The easiest way to run the extension is using the generated **Standalone JAR**. 
 
 ```bash
 java -jar build/libs/wiremock-hmac-1.0.0-SNAPSHOT-standalone.jar \
-    --extensions com.github.gersonmartins.wiremock.extension.HmacRequestMatcherExtension
+    --extensions io.github.gersonmartins.wiremock.extension.HmacRequestMatcherExtension
 ```
 
 ### Using the Standard JAR (Classpath mode)
@@ -51,7 +51,7 @@ If you downloaded the official WireMock standalone jar separately, you can attac
 ```bash
 java -cp "wiremock-standalone-X.Y.Z.jar:build/libs/wiremock-hmac-1.0.0-SNAPSHOT.jar" \
     com.github.tomakehurst.wiremock.standalone.WireMockServerRunner \
-    --extensions com.github.gersonmartins.wiremock.extension.HmacRequestMatcherExtension
+    --extensions io.github.gersonmartins.wiremock.extension.HmacRequestMatcherExtension
 ```
 
 _(Note: Adjust the file names according to the specific WireMock version you are using and the exact filename in `build/libs/`)_

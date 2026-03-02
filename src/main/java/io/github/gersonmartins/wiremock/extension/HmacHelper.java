@@ -1,4 +1,4 @@
-package com.github.gersonmartins.wiremock.extension;
+package io.github.gersonmartins.wiremock.extension;
 
 import com.github.jknack.handlebars.Helper;
 import com.github.jknack.handlebars.Options;

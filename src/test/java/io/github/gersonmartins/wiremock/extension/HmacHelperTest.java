@@ -1,4 +1,4 @@
-package com.github.gersonmartins.wiremock.extension;
+package io.github.gersonmartins.wiremock.extension;
 
 import com.github.jknack.handlebars.Options;
 import org.junit.jupiter.api.BeforeEach;
