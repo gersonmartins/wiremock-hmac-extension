@@ -1,9 +1,9 @@
 name: Release
 
 on:
-  release:
-    workflow_dispatch:
-    # types: [published] ## waiting get the credentials
+  #release:
+  #  types: [published]
+  workflow_dispatch:
 
 jobs:
   publish:
